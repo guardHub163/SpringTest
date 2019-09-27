@@ -16,6 +16,11 @@
     <bean id="someServiceBean" class="com.gdchent.cn.SomeServiceImpl">
 
     </bean>
+    <bean id="student" class="com.gdchent.cn.Student">
+        <property name="age" value="22" />
+        <property name="id"  value="1" />
+        <property name="name" value="lisi" />
+    </bean>
 
 </beans>
 

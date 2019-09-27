@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--bean元素：表示当前的对象需要有spring容器管理
+     class:被管理对象的类全名
+     -->
+    <bean id="service" class="com.gdchent.cn.MessageService"></bean>
+    <bean id="printer" class="com.gdchent.cn.MessagePrinter">
+        <property name="messageService" ref="service" ></property>
+
+    </bean>
+
+    <!--对象是放入到Spring的容器（Map<id,对象>）-->
+    <bean id="someServiceBean" class="com.gdchent.cn.SomeServiceImpl">
+
+    </bean>
+    <bean id="student" class="com.gdchent.cn.Student">
+        <property name="age" value="22" />
+        <property name="id"  value="1" />
+        <property name="name" value="lisi" />
+    </bean>
+
+</beans>
+
+
+<!--xsd:是约束文件的拓展名,xsd的约束文件功能强,验证比较全面
+ 文件的url地址，是唯一的
+ -->

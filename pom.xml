@@ -8,7 +8,6 @@
     <artifactId>SpringTest</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-
     <dependencies>
          <!--单元测试-->
         <dependency>
@@ -21,14 +20,21 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
-            <version>4.3.23.RELEASE</version>
+            <version>5.0.11.RELEASE</version>
         </dependency>
-
+        <!--简化bean的，不用写get跟set方法 它自动帮你生成-->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.6</version>
+            <scope>provided</scope>
+        </dependency>
         <dependency>
             <groupId>log4j</groupId>
             <artifactId>log4j</artifactId>
             <version>1.2.17</version>
         </dependency>
+
 
     </dependencies>
 
