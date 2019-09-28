@@ -1,4 +1,4 @@
-package com.gdchent.cn;
+package com.gdchent.cn.service;
 
 /**
  * SomeServiceImpl

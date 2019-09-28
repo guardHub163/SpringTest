@@ -105,17 +105,17 @@ spring.xml示例代码如下：
     <!--bean元素：表示当前的对象需要有spring容器管理
      class:被管理对象的类全名
      -->
-    <bean id="service" class="com.gdchent.cn.MessageService"></bean>
-    <bean id="printer" class="com.gdchent.cn.MessagePrinter">
+    <bean id="service" class="com.gdchent.cn.service.MessageService"></bean>
+    <bean id="printer" class="com.gdchent.cn.service.MessagePrinter">
         <property name="messageService" ref="service" ></property>
 
     </bean>
 
     <!--对象是放入到Spring的容器（Map<id,对象>）-->
-    <bean id="someServiceBean" class="com.gdchent.cn.SomeServiceImpl">
+    <bean id="someServiceBean" class="com.gdchent.cn.service.SomeServiceImpl">
 
     </bean>
-    <bean id="student" class="com.gdchent.cn.Student">
+    <bean id="student" class="com.gdchent.cn.service.Student">
         <property name="age" value="22" />
         <property name="id"  value="1" />
         <property name="name" value="lisi" />
@@ -126,6 +126,4 @@ spring.xml示例代码如下：
  -->
 
 ```
-
-
 

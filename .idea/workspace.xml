@@ -2,15 +2,34 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="73bb2d1b-859e-4d11-b315-9196d9445982" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/SpringTest.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gdchent/cn/Student.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/gdchent/cn/soun/Application.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/gdchent/cn/soun/CDPlayer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/gdchent/cn/soun/CompactDisc.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/spring.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gdchent/cn/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gdchent/cn/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/gdchent/cn/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gdchent/cn/Application.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gdchent/cn/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gdchent/cn/service/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gdchent/cn/ApplicationSpring.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gdchent/cn/service/ApplicationSpring.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gdchent/cn/ApplicationSpringXml.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gdchent/cn/service/ApplicationSpringXml.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gdchent/cn/MessagePrinter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gdchent/cn/service/MessagePrinter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gdchent/cn/MessageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gdchent/cn/service/MessageService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gdchent/cn/SomeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gdchent/cn/service/SomeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gdchent/cn/SomeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gdchent/cn/service/SomeServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gdchent/cn/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gdchent/cn/service/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/applicationContext.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/spring.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/spring.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/AppTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/applicationContext.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gdchent/cn/Application.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gdchent/cn/ApplicationSpring.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gdchent/cn/ApplicationSpringXml.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gdchent/cn/MessagePrinter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gdchent/cn/MessageService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gdchent/cn/SomeService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gdchent/cn/SomeServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gdchent/cn/Student.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/spring.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/spring.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/AppTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/AppTest.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -25,11 +44,36 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/gdchent/cn/Application.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/gdchent/cn/soun/CompactDisc.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="138">
-              <caret line="15" column="14" lean-forward="true" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
+            <state relative-caret-position="374">
+              <caret line="19" column="16" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="16" />
+              <folding>
+                <element signature="e#187#188#0" expanded="true" />
+                <element signature="e#212#213#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/gdchent/cn/soun/CDPlayer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="276">
+              <caret line="21" column="34" lean-forward="true" selection-start-line="21" selection-start-column="34" selection-end-line="21" selection-end-column="67" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/gdchent/cn/soun/Application.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="483">
+              <caret line="21" column="11" lean-forward="true" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="11" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -56,7 +100,6 @@
       <list>
         <option value="$PROJECT_DIR$/src/main/java/com/gdchent/cn/MessagePrinter.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gdchent/cn/MessageService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/gdchent/cn/ApplicationSpring.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gdchent/cn/SomeService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gdchent/cn/SomeServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/resources/applicationContext.xml" />
@@ -67,6 +110,11 @@
         <option value="$PROJECT_DIR$/spring.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/gdchent/cn/Application.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gdchent/cn/ApplicationSpringXml.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/gdchent/cn/ApplicationSpring.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/gdchent/cn/T.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/gdchent/cn/soun/Application.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/gdchent/cn/soun/CompactDisc.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/gdchent/cn/soun/CDPlayer.java" />
       </list>
     </option>
   </component>
@@ -82,6 +130,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -120,6 +170,15 @@
               <item name="SpringTest" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="cn" type="462c0819:PsiDirectoryNode" />
+              <item name="soun" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringTest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SpringTest" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -130,8 +189,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -142,10 +199,16 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="fileTemplates" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\software\java\SpringTest\src\main\resources" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -159,13 +222,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Application">
-    <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.gdchent.cn.Application" />
+  <component name="RunManager" selected="Application.Application (1)">
+    <configuration name="Application (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.gdchent.cn.soun.Application" />
       <module name="SpringTest" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.gdchent.cn.*" />
+          <option name="PATTERN" value="com.gdchent.cn.soun.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -173,12 +236,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ApplicationSpringXml" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.gdchent.cn.ApplicationSpringXml" />
+    <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.gdchent.cn.service.Application" />
       <module name="SpringTest" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.gdchent.cn.*" />
+          <option name="PATTERN" value="com.gdchent.cn.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ApplicationSpring" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.gdchent.cn.service.ApplicationSpring" />
+      <module name="SpringTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.gdchent.cn.service.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -195,16 +271,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AppTest.shouldAnswerWithTrue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="SpringTest" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="AppTest" />
-      <option name="METHOD_NAME" value="shouldAnswerWithTrue" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="AppTest.test02" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SpringTest" />
       <option name="PACKAGE_NAME" value="" />
@@ -217,11 +283,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Application (1)" />
         <item itemvalue="Application.Application" />
+        <item itemvalue="Application.ApplicationSpring" />
         <item itemvalue="JUnit.AppTest.test02" />
         <item itemvalue="JUnit.AppTest" />
-        <item itemvalue="JUnit.AppTest.shouldAnswerWithTrue" />
-        <item itemvalue="Application.ApplicationSpringXml" />
       </list>
     </recent_temporary>
   </component>
@@ -238,7 +304,8 @@
       <workItem from="1569552170157" duration="23266000" />
       <workItem from="1569598878409" duration="58000" />
       <workItem from="1569598940430" duration="5159000" />
-      <workItem from="1569604216456" duration="1156000" />
+      <workItem from="1569604216456" duration="1933000" />
+      <workItem from="1569662649657" duration="3897000" />
     </task>
     <servers />
   </component>
@@ -263,7 +330,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29639000" />
+    <option name="totallyTimeSpent" value="34313000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -278,7 +345,7 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21108742" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21321961" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -286,8 +353,8 @@
       <window_info id="UI Designer" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.34815618" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.329718" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.20607375" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -295,10 +362,10 @@
       <window_info anchor="bottom" id="Spring" order="7" weight="0.3286334" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.3177874" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.329718" />
       <window_info anchor="bottom" id="Database Changes" order="11" />
       <window_info anchor="bottom" id="Terminal" order="12" weight="0.324295" />
-      <window_info anchor="bottom" id="Version Control" order="13" weight="0.31127983" />
+      <window_info anchor="bottom" id="Version Control" order="13" weight="0.21691974" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -345,6 +412,32 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="editorHistoryManager">
     <entry file="file://$MAVEN_REPOSITORY$/org/springframework/spring-context/4.3.13.RELEASE/spring-context-4.3.13.RELEASE.pom" />
     <entry file="jar://$PROJECT_DIR$/../android/jdk/src.zip!/java/io/PrintStream.java" />
@@ -355,7 +448,6 @@
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/4.3.13.RELEASE/spring-context-4.3.13.RELEASE.jar!/org/springframework/context/annotation/ComponentScan.class" />
     <entry file="jar://$PROJECT_DIR$/../android/jdk/src.zip!/java/lang/String.java" />
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/4.3.13.RELEASE/spring-context-4.3.13.RELEASE.jar!/org/springframework/context/annotation/AnnotationConfigApplicationContext.class" />
-    <entry file="file://$MAVEN_REPOSITORY$/log4j/log4j/1.2.17/log4j-1.2.17.pom" />
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/maven/lib/maven.jar!/schemas/maven-4.0.0.xsd">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-316">
@@ -415,53 +507,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gdchent/cn/MessageService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="373">
-          <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
-          <folding>
-            <element signature="e#307#308#0" expanded="true" />
-            <element signature="e#343#344#0" expanded="true" />
-            <element signature="e#376#377#0" expanded="true" />
-            <element signature="e#406#407#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gdchent/cn/MessagePrinter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="97">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-          <folding>
-            <element signature="e#438#439#0" expanded="true" />
-            <element signature="e#488#489#0" expanded="true" />
-            <element signature="e#521#522#0" expanded="true" />
-            <element signature="e#584#585#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/4.3.23.RELEASE/spring-context-4.3.23.RELEASE.jar!/org/springframework/context/annotation/AnnotationConfigApplicationContext.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="529">
           <caret line="30" column="40" lean-forward="true" selection-start-line="30" selection-start-column="40" selection-end-line="30" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../../android/jdk/lib/src.zip!/java.base/java/io/PrintStream.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="101">
-          <caret line="871" lean-forward="true" selection-start-line="871" selection-end-line="872" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gdchent/cn/SomeServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="7" column="26" lean-forward="true" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
-          <folding>
-            <element signature="e#174#175#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -510,38 +559,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gdchent/cn/SomeService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/5.0.11.RELEASE/spring-context-5.0.11.RELEASE.jar!/org/springframework/context/support/ClassPathXmlApplicationContext.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="230">
           <caret line="18" column="11" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gdchent/cn/Student.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/spring.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="21" column="45" lean-forward="true" selection-start-line="21" selection-start-column="45" selection-end-line="21" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="20" column="22" lean-forward="true" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -552,30 +573,145 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gdchent/cn/ApplicationSpring.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/spring.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="471">
-          <caret line="24" column="38" lean-forward="true" selection-start-line="24" selection-start-column="38" selection-end-line="24" selection-end-column="38" />
+        <state relative-caret-position="184">
+          <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$MAVEN_REPOSITORY$/log4j/log4j/1.2.17/log4j-1.2.17.pom">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-69">
+          <caret line="12" column="24" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="529">
+          <caret line="23" column="21" lean-forward="true" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../../android/jdk/lib/src.zip!/java.base/java/io/PrintStream.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1421">
+          <caret line="880" column="25" selection-start-line="880" selection-start-column="25" selection-end-line="880" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../../android/jdk/lib/src.zip!/java.base/java/lang/System.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-6468">
+          <caret line="140" column="36" selection-start-line="140" selection-start-column="36" selection-end-line="140" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gdchent/cn/T.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gdchent/cn/service/ApplicationSpring.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gdchent/cn/ApplicationSpringXml.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gdchent/cn/service/ApplicationSpringXml.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="13" column="47" lean-forward="true" selection-start-line="13" selection-start-column="47" selection-end-line="13" selection-end-column="47" />
+        <state relative-caret-position="139">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gdchent/cn/Application.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gdchent/cn/service/MessagePrinter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="138">
-          <caret line="15" column="14" lean-forward="true" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gdchent/cn/service/MessageService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gdchent/cn/service/SomeService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gdchent/cn/service/SomeServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gdchent/cn/service/Student.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gdchent/cn/service/Application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="309">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/5.0.11.RELEASE/spring-context-5.0.11.RELEASE.jar!/org/springframework/context/annotation/AnnotationConfigApplicationContext.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-46">
+          <caret line="20" column="11" selection-start-line="20" selection-start-column="11" selection-end-line="20" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gdchent/cn/soun/CompactDisc.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="19" column="16" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="16" />
+          <folding>
+            <element signature="e#187#188#0" expanded="true" />
+            <element signature="e#212#213#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gdchent/cn/soun/Application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="21" column="11" lean-forward="true" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gdchent/cn/soun/CDPlayer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="21" column="34" lean-forward="true" selection-start-line="21" selection-start-column="34" selection-end-line="21" selection-end-column="67" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

@@ -1,4 +1,4 @@
-package com.gdchent.cn;
+package com.gdchent.cn.service;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
@@ -23,6 +23,6 @@ public class ApplicationSpring {
         //设置对象的属性
         messagePrinter.setMessageService(messageService);
         messagePrinter.printMessage();
-
+        System.out.println("end up");
     }
 }

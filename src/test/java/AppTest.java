@@ -1,4 +1,4 @@
-import com.gdchent.cn.SomeService;
+import com.gdchent.cn.service.SomeService;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.FileSystemXmlApplicationContext;
