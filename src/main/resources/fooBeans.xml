@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <bean id="foo" class="com.gdchent.cn.constructor.Foo">
+        <!--<constructor-arg ref="bar"/>-->
+        <!--<constructor-arg ref="baz"/>-->
+        <constructor-arg type="int" value="2001"/>
+        <constructor-arg type="java.lang.String" value="gdchent"/>
+    </bean>
+
+    <bean id="bar" class="com.gdchent.cn.constructor.Bar"/>
+    <bean id="baz" class="com.gdchent.cn.constructor.Baz" />
+</beans>
