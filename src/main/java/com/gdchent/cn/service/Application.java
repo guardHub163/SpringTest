@@ -1,5 +1,6 @@
 package com.gdchent.cn.service;
 
+import org.springframework.beans.factory.BeanFactory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -27,6 +28,6 @@ public class Application {
         Student student= (Student) context.getBean("student");//这个getBean的参数就是在spring.xml里面的bean标签的id的值
 
         //因为xml里面给该bean已经进行了赋值
-        System.out.println(student.getName());
+        //System.out.println(student.getName());
     }
 }

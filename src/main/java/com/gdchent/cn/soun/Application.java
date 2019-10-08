@@ -16,7 +16,6 @@ public class Application {
 
     public static void main(String ...args){
 
-
         //第一步 设置 ApplicationContext
         ApplicationContext context=new AnnotationConfigApplicationContext(Application.class);
         CDPlayer cdPlayer=context.getBean(CDPlayer.class);

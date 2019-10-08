@@ -10,10 +10,11 @@ public class MessagePrinter {
 
     public MessagePrinter() {
         super();
-        System.out.println("messagePrint开始");
+        System.out.println("打印机调用无参数构造方法");
     }
 
     public MessagePrinter(MessageService messageService) {
+        System.out.println("打印机调用有参数构造方法");
         this.messageService = messageService;
     }
 
@@ -22,7 +23,7 @@ public class MessagePrinter {
     }
 
     public void printMessage(){
-        System.out.println(messageService.getMessage());
+        System.out.println("输出messagePrinter:"+messageService.getMessage());
     }
 
 
