@@ -4,7 +4,7 @@ package com.gdchent.cn.constructor;
 /**
  * @author: gdchent
  * @date: 2019/10/8
- * @description:
+ * @description:测试Spring的依赖注入
  */
 public class Foo {
     private Bar bar;
@@ -37,4 +37,5 @@ public class Foo {
     public void startInstallB(){
         System.out.println("Kaishi 装B");
     }
+
 }

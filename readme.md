@@ -395,3 +395,195 @@ TextEditor有参数构造器
 Inside checkSpelling
 ```
 
+##### 构造函数带参数依赖注入方式
+
+###### 方式1： type 属性显式的指定了构造函数参数的类型
+
+首先进入配置文件，示例代码如下：
+
+```xml
+ <bean id="foo" class="com.gdchent.cn.constructor.Foo">
+        <!--<constructor-arg ref="bar"/>-->
+        <!--<constructor-arg ref="baz"/>-->
+        <!--基于type方式指定实体bean 这种叫做显性指定构造器参数类型-->
+        <constructor-arg type="int" value="2001"/>
+        <constructor-arg type="java.lang.String" value="gdchent"/>
+    </bean>
+```
+
+Java实体**Foo.java**文件：
+
+```java
+package com.gdchent.cn.constructor;
+
+
+/**
+ * @author: gdchent
+ * @date: 2019/10/8
+ * @description:测试Spring的依赖注入
+ */
+public class Foo {
+    private Bar bar;
+    private Baz baz ;
+    private int year;
+    private String name;
+    public Foo() {
+        System.out.println("无参构造大佬调用了");
+    }
+
+    public Foo(Bar bar, Baz baz){
+        System.out.println("有参构造大佬调用了");
+        this.bar=bar;
+        this.baz=baz;
+    }
+    public Foo(int year,String name){
+        System.out.println("基本数据类型构造函数被调用了");
+        this.year=year;
+        this.name=name;
+    }
+
+    public Foo(Bar bar, Baz baz, int year, String name) {
+        this.bar = bar;
+        this.baz = baz;
+        this.year = year;
+        this.name = name;
+    }
+
+    //调用装b方法
+    public void startInstallB(){
+        System.out.println("Kaishi 装B");
+    }
+}
+```
+
+以上这种方式，是显示在xml的bean标签里面 通过type属性来显示指定 context容器显示创建bean到底调用哪个构造函数.
+
+###### 方式1： index 属性隐式的指定了构造函数参数的类型
+
+**setMethodTextEditorBeans.xml**示例代码如下：
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="textEditor" class="com.gdchent.cn.setmethod.TextEditor">
+        <!--会调用设置函数-->
+        <property name="spellChecker" ref="spellChecker"/>
+    </bean>
+    <bean id="spellChecker" class="com.gdchent.cn.setmethod.SpellChecker"/>
+</beans>
+```
+
+你应该注意定义在基于构造函数注入和基于设值函数注入中的 Beans.xml 文件的区别。唯一的区别就是在基于构造函数注入中，我们使用的是〈bean〉标签中的〈constructor-arg〉元素，而在基于设值函数的注入中，我们使用的是〈bean〉标签中的〈property〉元素。
+
+###### spring注入集合
+
+首先看Java的bean实例，**JavaCollection.java**实例代码:
+
+```java
+package com.gdchent.cn.list;
+
+import java.util.List;
+import java.util.Map;
+import java.util.Properties;
+import java.util.Set;
+
+/**
+ * @author: gdchent
+ * @date: 2019/10/9
+ * @description:
+ */
+public class JavaCollection {
+
+    //列表集合
+    List addressList;
+    Set addressSet;
+    Map addressMap ;
+
+    Properties addressProp ;
+
+    public List getAddressList() {
+        return addressList;
+    }
+
+    public void setAddressList(List addressList) {
+        this.addressList = addressList;
+    }
+
+    public Set getAddressSet() {
+        return addressSet;
+    }
+
+    public void setAddressSet(Set addressSet) {
+        this.addressSet = addressSet;
+    }
+
+    public Map getAddressMap() {
+        return addressMap;
+    }
+
+    public void setAddressMap(Map addressMap) {
+        this.addressMap = addressMap;
+    }
+
+    public Properties getAddressProp() {
+        return addressProp;
+    }
+
+    public void setAddressProp(Properties addressProp) {
+        this.addressProp = addressProp;
+    }
+}
+
+```
+
+然后看下spring注入文件,**collectBeans.xml**文件代码如下：
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+    
+    <bean id="javaCollection" class="com.gdchent.cn.list.JavaCollection">
+        <property name="addressList">
+            <list>
+                <value>印第安纳</value>
+                <value>迈阿密</value>
+                <value>克利夫兰</value>
+                <value>洛杉矶</value>
+            </list>
+        </property>
+        <property name="addressSet">
+            <set>
+                <value>印第安纳</value>
+                <value>迈阿密</value>
+                <value>克利夫兰</value>
+                <value>洛杉矶</value>
+            </set>
+
+        </property>
+        <property name="addressMap">
+            <map>
+                <entry key="1" value="印第安纳"/>
+                <entry key="2" value="迈阿密"/>
+                <entry key="3" value="克利夫兰"/>
+                <entry key="4" value="洛杉矶"/>
+            </map>
+        </property>
+
+        <property name="addressProp">
+            <props>
+                <prop key="one">印第安纳</prop>
+                <prop key="two">迈阿密</prop>
+                <prop key="three">克利夫兰</prop>
+                <prop key="four">洛杉矶</prop>
+            </props>
+        </property>
+    </bean>
+</beans>
+```
+

@@ -6,4 +6,8 @@ package com.gdchent.cn.constructor;
  * @description:
  */
 public class Bar {
+
+
+    public Bar(){}
+
 }

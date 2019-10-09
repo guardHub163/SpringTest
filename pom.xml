@@ -22,12 +22,22 @@
             <artifactId>spring-context</artifactId>
             <version>5.0.11.RELEASE</version>
         </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-core</artifactId>
+            <version>5.0.11.RELEASE</version>
+        </dependency>
         <!--简化bean的，不用写get跟set方法 它自动帮你生成-->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <version>1.18.6</version>
             <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>dom4j</groupId>
+            <artifactId>dom4j</artifactId>
+            <version>1.6.1</version>
         </dependency>
         <dependency>
             <groupId>log4j</groupId>

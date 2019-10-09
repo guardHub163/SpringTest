@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <bean id="javaCollection" class="com.gdchent.cn.list.JavaCollection">
+        <property name="addressList">
+            <list>
+                <value>印第安纳</value>
+                <value>迈阿密</value>
+                <value>克利夫兰</value>
+                <value>洛杉矶</value>
+            </list>
+        </property>
+        <property name="addressSet">
+            <set>
+                <value>印第安纳</value>
+                <value>迈阿密</value>
+                <value>克利夫兰</value>
+                <value>洛杉矶</value>
+            </set>
+
+        </property>
+        <property name="addressMap">
+            <map>
+                <entry key="1" value="印第安纳"/>
+                <entry key="2" value="迈阿密"/>
+                <entry key="3" value="克利夫兰"/>
+                <entry key="4" value="洛杉矶"/>
+            </map>
+        </property>
+
+        <property name="addressProp">
+            <props>
+                <prop key="one">印第安纳</prop>
+                <prop key="two">迈阿密</prop>
+                <prop key="three">克利夫兰</prop>
+                <prop key="four">洛杉矶</prop>
+            </props>
+        </property>
+    </bean>
+
+</beans>

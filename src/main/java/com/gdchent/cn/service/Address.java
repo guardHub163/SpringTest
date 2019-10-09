@@ -2,10 +2,14 @@ package com.gdchent.cn.service;
 
 import lombok.Data;
 
+/**
+ * @author: gdchent
+ * @date: 2019/10/9
+ * @description:
+ */
 @Data
-public class Student {
+public class Address {
+
     private long id;
     private String name;
-    private int age;
-    private Address address;
 }

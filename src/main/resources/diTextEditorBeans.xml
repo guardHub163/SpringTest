@@ -3,9 +3,11 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-<bean id="textEditor" class="com.gdchent.cn.di.TextEditor">
-    <!--构造函数-->
-    <constructor-arg ref="spellChcker"/>
-</bean>
-<bean id="spellChcker" class="com.gdchent.cn.di.SpellChecker"/>
+    <bean id="textEditor" class="com.gdchent.cn.di.TextEditor">
+        <!--构造函数-->
+        <constructor-arg ref="spellChcker"/>
+    </bean>
+    <bean id="spellChcker" class="com.gdchent.cn.di.SpellChecker"/>
+
+
 </beans>

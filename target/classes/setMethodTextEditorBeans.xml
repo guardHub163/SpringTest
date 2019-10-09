@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="textEditor" class="com.gdchent.cn.setmethod.TextEditor">
+        <!--会调用设置函数-->
+        <property name="spellChecker" ref="spellChecker"/>
+    </bean>
+
+    <bean id="spellChecker" class="com.gdchent.cn.setmethod.SpellChecker"/>
+
+    <!--property的ref属性指向的是引用数据对象-->
+    <bean id="outerBean" class="com.gdchent.cn.setmethod.OuterBean">
+        <property name="target" ref="innerBean" />
+    </bean>
+    <bean id="innerBean" class="com.gdchent.cn.setmethod.OuterBean.InnerBean"/>
+
+
+
+</beans>

@@ -6,4 +6,5 @@ package com.gdchent.cn.constructor;
  * @description:
  */
 public class Baz {
+    public Baz(){}
 }

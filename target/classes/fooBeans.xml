@@ -5,12 +5,18 @@
 
 
     <bean id="foo" class="com.gdchent.cn.constructor.Foo">
-        <constructor-arg ref="bar"/>
-        <constructor-arg ref="baz"/>
+        <!--<constructor-arg ref="bar"/>-->
+        <!--<constructor-arg ref="baz"/>-->
+        <!--基于type方式指定实体bean 这种叫做显性指定构造器参数类型-->
         <constructor-arg type="int" value="2001"/>
         <constructor-arg type="java.lang.String" value="gdchent"/>
     </bean>
 
+    <!--基于index属性隐式指定构造函数参数-->
+    <bean id="hiddenBean" class="com.gdchent.cn.constructor.HiddenBean">
+        <constructor-arg index="0" value="name_gdchent"/>
+        <constructor-arg index="1"  value="广东省深圳市南山区"/>
+    </bean>
     <bean id="bar" class="com.gdchent.cn.constructor.Bar"/>
     <bean id="baz" class="com.gdchent.cn.constructor.Baz" />
 </beans>

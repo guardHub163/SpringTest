@@ -16,12 +16,20 @@
     <bean id="someServiceBean" class="com.gdchent.cn.service.SomeServiceImpl">
 
     </bean>
+
+    <!--property的value属性只能针对于基本数据类型，而如果要使用引用数据类型使用ref属性即可-->
     <bean id="student" class="com.gdchent.cn.service.Student">
         <property name="age" value="22" />
         <property name="id"  value="1" />
         <property name="name" value="lisi" />
+        <property name="address" ref="address" />
     </bean>
 
+
+    <bean id="address" class="com.gdchent.cn.service.Address">
+        <property name="id" value="1" />
+        <property name="name" value="address的实体类地址-广东深圳" />
+    </bean>
 </beans>
 
 
