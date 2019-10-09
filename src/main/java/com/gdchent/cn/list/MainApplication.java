@@ -25,7 +25,7 @@ public class MainApplication {
         Iterator iterator = list.iterator();
         Iterator setIt = set.iterator();
         Iterator mapIt = map.entrySet().iterator();
-
+        //循环
         while (iterator.hasNext()) {
             Object t = iterator.next();
             if (t instanceof String) {

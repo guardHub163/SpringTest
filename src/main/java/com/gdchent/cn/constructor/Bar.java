@@ -7,7 +7,6 @@ package com.gdchent.cn.constructor;
  */
 public class Bar {
 
-
     public Bar(){}
 
 }
