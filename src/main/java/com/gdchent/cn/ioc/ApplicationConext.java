@@ -7,5 +7,8 @@ package com.gdchent.cn.ioc;
  */
 public interface ApplicationConext {
 
-     public Object getBean(String path);
+    Object getBean(String path);
+
+    Object getBean(Class requiredType);
+
 }

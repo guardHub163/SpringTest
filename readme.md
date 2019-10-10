@@ -587,3 +587,188 @@ public class JavaCollection {
 </beans>
 ```
 
+##### 手写模拟实现IOC框架:
+
+首先我们看下iocTestBeans.xml文件：
+
+```java
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--property的value属性只能针对于基本数据类型，而如果要使用引用数据类型使用ref属性即可-->
+    <bean id="student" class="com.gdchent.cn.service.Student">
+        <property name="age" value="22" />
+        <property name="id"  value="1" />
+        <property name="name" value="lisi" />
+        <property name="address" ref="address" />
+    </bean>
+
+    <bean id="address" class="com.gdchent.cn.service.Address">
+        <property name="id" value="1" />
+        <property name="name" value="address的实体类地址-广东深圳" />
+    </bean>
+</beans>
+```
+
+接下来我们看下ioc代码，首先看**ApplicationConext.java**代码：
+
+```java
+package com.gdchent.cn.ioc;
+
+/**
+ * @author: gdchent
+ * @date: 2019/10/9
+ * @description:
+ */
+public interface ApplicationConext {
+     public Object getBean(String path);
+}
+
+```
+
+然后我们看下**ClassPathXmlApplicationContext.java**代码：
+
+```java
+package com.gdchent.cn.ioc;
+
+import org.dom4j.Document;
+import org.dom4j.DocumentException;
+import org.dom4j.Element;
+import org.dom4j.io.SAXReader;
+import org.xml.sax.SAXException;
+import sun.rmi.runtime.Log;
+
+import javax.xml.ws.soap.MTOM;
+import java.lang.reflect.Constructor;
+import java.lang.reflect.InvocationTargetException;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
+
+/**
+ * @author: gdchent
+ * @date: 2019/10/9
+ * @description:
+ */
+public class ClassPathXmlApplicationContext implements ApplicationConext {
+
+    private String path;
+    private Map<String, Object> ioc = new HashMap<String, Object>();
+
+    public ClassPathXmlApplicationContext() {
+    }
+
+    public ClassPathXmlApplicationContext(String path) {
+        try {
+            this.path = path;
+            //第一步 进行xml 解析
+            SAXReader reader = new SAXReader();
+            Document document = reader.read(path);
+            System.out.println("document" + document);
+            //获取最外面的beans根节点
+            Element rootElement = document.getRootElement();
+            Iterator<Element> iterator = rootElement.elementIterator();
+            System.out.println("root" + rootElement);
+            //遍历节点
+            while (iterator.hasNext()) {
+                Element element = iterator.next();
+                System.out.println(element);
+                String id = element.attributeValue("id");
+                String className = element.attributeValue("class");
+                System.out.println("id:" + id);
+                System.out.println("class:" + className);
+                //通过反射机制来创建对象
+                Class clazz = Class.forName(className);
+                Constructor constructor = clazz.getConstructor(); //获取无参数构造器
+                System.out.println(constructor);
+                Object object = constructor.newInstance();
+                System.out.println(object);
+                Iterator<Element> beanIter = element.elementIterator();
+                while (beanIter.hasNext()) {
+                    Element property = beanIter.next();
+                    String name= property.attributeValue("name");
+                    String value = property.attributeValue("value");
+                    System.out.println("bean_name:"+name);
+                    System.out.println("bean_value:"+value);
+                    String methodName="set"+name.substring(0,1).toUpperCase()+name.substring(1);
+                    System.out.println(methodName);
+                }
+                //将目标对象放入ioc的map容器
+                ioc.put(id, object);
+            }
+        } catch (DocumentException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        } catch (NoSuchMethodException e) {
+            e.printStackTrace();
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        } catch (InstantiationException e) {
+            e.printStackTrace();
+        } catch (InvocationTargetException e) {
+            e.printStackTrace();
+        } finally {
+			
+        }
+    }
+	 //这个暴露给外部调用获取对象的方法 参数是bean标签的id
+    public Object getBean(String id) {
+        System.out.println("实现类的getBean:"+id);
+        return ioc.get(id);
+    }
+
+    //通过Class来获取对象
+    public Object getBean(Class requiredType){
+        return iocMap.get(requiredType);
+    }
+}
+```
+
+总结ClassPathXmlApplicationContext构造函数里面的实现思路：
+
+第一步 通过SAXReader 来解析xml文件
+
+第二步 通过拿到document对象  来获取最外面的根节点，也就是xml里面的beans标签
+
+第三步 因为Element这个节点类，它里面是基于List集合，所以它这里是通过迭代器来进行遍历
+
+第四步 在while循环遍历中获取 bean标签对象元素
+
+第五步 就是在while循环里面继续获取bean标签的property属性
+
+第六步 将遍历设置好值的对象 添加到map对象中
+
+以上就是解析xml 文件读取标签的整个逻辑
+
+下面是**MainApplication.java**文件：
+
+```java
+package com.gdchent.cn.ioc;
+
+import com.gdchent.cn.service.Student;
+
+/**
+ * @author: gdchent
+ * @date: 2019/10/9
+ * @description:简单实现ioc 底层原理
+ */
+public class MainApplication {
+
+    public static void main(String[] args) {
+        String config="D:/software/SpringTest/src/main/resources/iocTestBeans.xml";
+        ApplicationConext conext=new ClassPathXmlApplicationContext(config);
+        Student student = (Student) conext.getBean("student");
+        System.out.println("获取实例对象"+student);
+        Student student2 = (Student) conext.getBean(Student.class);
+        System.out.println("获取实例对象2:"+student2);
+    }
+}
+```
+
+运行效果图如下：
+
+![image](https://github.com/gdchent/SpringTest/blob/master/effectImg/手写模拟实现ioc原理.png)
+
