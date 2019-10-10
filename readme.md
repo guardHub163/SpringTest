@@ -772,3 +772,89 @@ public class MainApplication {
 
 ![image](https://github.com/gdchent/SpringTest/blob/master/effectImg/手写模拟实现ioc原理.png)
 
+##### Spring 的继承(parent属性)
+
+spring的继承 parent 2个xml的bean具有一样的属性 直接继承过来 非Java那样的继承。
+
+先来看配置文件**parentBeans.xml**
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="parent1" class="com.gdchent.cn.parent.Parent">
+        <property name="name" value="gdchent"></property>
+        <property name="age" value="22"></property>
+    </bean>
+    <bean id="parent2" parent="parent1">
+
+    </bean>
+</beans>
+```
+
+**Parent.java**文件
+
+```java
+package com.gdchent.cn.parent;
+
+import lombok.Data;
+
+/**
+ * @author: gdchent
+ * @date: 2019/10/10
+ * @description:Parent实体类
+ */
+@Data
+public class Parent {
+    private String name;
+    private int age;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+}
+
+```
+
+然后进入测试**MainApplication.java**文件：
+
+```java
+package com.gdchent.cn.parent;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+/**
+ * @author: gdchent
+ * @date: 2019/10/10
+ * @description:测试spring的继承 parent 2个xml的bean具有一样的属性 直接继承过来 非Java那样的继承
+ */
+public class MainApplication {
+
+    public static void main(String ...args){
+        String config="parentBeans.xml";
+        ApplicationContext context=new ClassPathXmlApplicationContext(config);
+        Parent parent1= (Parent) context.getBean("parent1");
+        Parent parent2= (Parent) context.getBean("parent2");
+        System.out.println("name1:"+parent1.getName());//name1:gdchent
+        System.out.println("name2:"+parent2.getName()); //name1:gdchent
+        System.out.println(parent1==parent2); //false
+    }
+}
+
+```
+

@@ -16,5 +16,6 @@ public class MainApplication {
         System.out.println("获取实例对象"+student);
         Student student2 = (Student) conext.getBean(Student.class);
         System.out.println("获取实例对象2:"+student2);
+        System.out.println(student==student2);
     }
 }
