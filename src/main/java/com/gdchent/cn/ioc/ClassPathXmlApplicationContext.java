@@ -63,7 +63,6 @@ public class ClassPathXmlApplicationContext implements ApplicationConext {
                     String valueStr = property.attributeValue("value");
                     String ref = property.attributeValue("ref");
                     if(ref==null){
-
                         String methodName="set"+name.substring(0,1).toUpperCase()+name.substring(1);
                         Field field=clazz.getDeclaredField(name);
                         //给对象的属性设置值

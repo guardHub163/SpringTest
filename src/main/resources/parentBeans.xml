@@ -4,7 +4,6 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 
-
     <bean id="parent1" class="com.gdchent.cn.parent.Parent">
         <property name="name" value="gdchent"></property>
         <property name="age" value="22"></property>

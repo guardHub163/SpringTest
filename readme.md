@@ -858,3 +858,168 @@ public class MainApplication {
 
 ```
 
+Spring的继承关注点在于Java的对象，而不在于类，即不同的2个类的实例化对象可以完成继承，前提是子对象必须包含父对象的所有属性，同时可以在此基础上添加其他的属性。
+
+##### Spring 的依赖
+
+与继承相似，依赖也是描述bean与bean之间的关系，配置依赖之后，被依赖的bean一定先创建，再创建依赖的bean，A依赖于B,则先创建B对象，再创建A对象.
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="user" class="com.gdchent.cn.depends.User" depends-on="userStudent">
+
+    </bean>
+    <bean id="userStudent" class="com.gdchent.cn.depends.UserStudent">
+    </bean>
+</beans>
+```
+
+##### Spring 的工厂方法
+
+ioc通过工厂模式创建bean的方式有2种：
+
+- 静态工厂方法
+
+- 实例工厂方法
+
+  ###### 静态工厂方法示例代码：
+
+  ```java
+  package com.gdchent.cn.factory;
+  
+  import lombok.Data;
+  
+  /**
+   * @author: gdchent
+   * @date: 2019/10/10
+   * @description:
+   */
+  @Data
+  public class Car {
+      private long id;
+      private String name;
+  
+      public Car() {
+      }
+  
+      public Car(long id, String name) {
+          this.id = id;
+          this.name = name;
+      }
+  
+      public long getId() {
+          return id;
+      }
+  
+      public void setId(long id) {
+          this.id = id;
+      }
+  
+      public String getName() {
+          return name;
+      }
+  
+      public void setName(String name) {
+          this.name = name;
+      }
+  
+      @Override
+      public String toString() {
+          return "Car{" +
+                  "id=" + id +
+                  ", name='" + name + '\'' +
+                  '}';
+      }
+  }
+  
+  ```
+
+  ```java
+  package com.gdchent.cn.factory;
+  
+  import lombok.AllArgsConstructor;
+  import lombok.Data;
+  import lombok.NoArgsConstructor;
+  
+  import java.util.HashMap;
+  import java.util.Map;
+  
+  /**
+   * @author: gdchent
+   * @date: 2019/10/10
+   * @description:
+   */
+  @Data
+  public class StaticCarFactory {
+  
+      private static Map<Long,Car> carMap=new HashMap<Long, Car>();
+      static {
+          carMap.put(1L,new Car(1L,"宝马"));
+          carMap.put(2L,new Car(2L,"奔驰"));
+      }
+  
+      public static Car getCar(long id){
+          return carMap.get(id);
+      }
+  }
+  
+  ```
+
+  测试**MainApplication.java**代码如下：
+
+  ```java
+  package com.gdchent.cn.factory;
+  
+  import org.springframework.context.ApplicationContext;
+  import org.springframework.context.support.ClassPathXmlApplicationContext;
+  
+  /**
+   * @author: gdchent
+   * @date: 2019/10/10
+   * @description:
+   */
+  public class MainApplication {
+      public static void main(String[] args) {
+  //        Car car=StaticCarFactory.getCar(1L);
+  //        System.out.println(car);
+          String config="springFactory.xml";
+          ApplicationContext context=new ClassPathXmlApplicationContext(config);
+          Car car= (Car) context.getBean("car");
+          System.out.println(car);
+      }
+  }
+  ```
+
+  实例工厂方法：
+
+  ```xml
+  <?xml version="1.0" encoding="UTF-8"?>
+  <beans xmlns="http://www.springframework.org/schema/beans"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+  
+       <!--配置静态工厂-->
+      <bean id="car" class="com.gdchent.cn.factory.StaticCarFactory" factory-method="getCar">
+          <constructor-arg value="2"></constructor-arg>
+      </bean>
+  
+      <!--配置实例工厂 bean-->
+      <bean id="carFactory" class="com.gdchent.cn.factory.InstanceFactory">
+  
+      </bean>
+      <!--配置实例工厂创建 Car -->
+      <bean id="car2" factory-bean="carFactory" factory-method="getCar">
+          <constructor-arg value="1"></constructor-arg>
+      </bean>
+  
+  </beans>
+  ```
+  
+  ##### IOC自动装载（Autowire）
+  
+  ioc负责创建对象，DI负责完成对象的依赖注入
+

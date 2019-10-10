@@ -3,12 +3,12 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-
-    <bean id="parent1" class="com.gdchent.cn.parent.Parent">
-        <property name="name" value="gdchent"></property>
-        <property name="age" value="22"></property>
-    </bean>
-    <bean id="parent2" parent="parent1">
+    <bean id="user" class="com.gdchent.cn.depends.User" depends-on="userStudent">
 
     </bean>
+    <bean id="userStudent" class="com.gdchent.cn.depends.UserStudent">
+    </bean>
+
+
+
 </beans>
