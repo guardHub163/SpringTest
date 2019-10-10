@@ -1,5 +1,7 @@
 package com.gdchent.cn.ioc;
 
+import com.gdchent.cn.service.Address;
+import com.gdchent.cn.service.Student;
 import org.dom4j.Document;
 import org.dom4j.DocumentException;
 import org.dom4j.Element;
@@ -45,7 +47,7 @@ public class ClassPathXmlApplicationContext implements ApplicationConext {
             while (iterator.hasNext()) {
                 //循环获取每一个子节点
                 Element element = iterator.next();
-                System.out.println(element);
+                System.out.println("element:"+element);
                 String id = element.attributeValue("id"); //student address
                 String className = element.attributeValue("class");
                 //通过反射机制来创建对象
@@ -84,14 +86,24 @@ public class ClassPathXmlApplicationContext implements ApplicationConext {
                         //将目标对象放入ioc的map容器
                         ioc.put(id, object);
                         iocMap.put(clazz,object);
-                    }else{
-                         //如果有ref属性  赋值ref属性指向的对象
-                        System.out.println("ioc"+ref);
                     }
 
                 }
 
             }
+              //如果有ref属性  赋值ref属性指向的对象
+            System.out.println("ioc:"+ioc.keySet());
+            //
+            Object object1=ioc.get("address");
+            Object object2=ioc.get("student");
+            // 拿到Student对象
+            if(object2 instanceof Student){
+                Student student= (Student) object2;
+                if(object1 instanceof Address){
+                    student.setAddress((Address) object1);
+                }
+            }
+            //通过反射
         } catch (DocumentException e) {
             e.printStackTrace();
         } catch (ClassNotFoundException e) {

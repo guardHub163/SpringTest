@@ -8,4 +8,8 @@ public class Student {
     private String name;
     private int age;
     private Address address;
+
+    public void setAddress(Address address) {
+        this.address = address;
+    }
 }
